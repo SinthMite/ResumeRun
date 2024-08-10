@@ -1,10 +1,13 @@
+import React from "react";
+import './Pages.scss';
+
 export function Features() {
     return (
         <div className="mt-20 px-4">
             {/* Introduction Section */}
             <div className="flex flex-col items-center text-center">
                 <h1 className="text-4xl font-bold text-gray-800 mb-10">
-                    Discover the Power of <span className="text-blue-500">ResumeRun</span>
+                    Discover the Power of <span className="text-highlight">ResumeRun</span>
                 </h1>
                 <p className="text-xl text-gray-600 max-w-3xl">
                     ResumeRun offers a range of powerful features designed to simplify your job search and help you land your dream job faster. From automated job applications to customizable resumes, ResumeRun has you covered.
@@ -73,11 +76,11 @@ export function Features() {
 
             {/* Call to Action Section */}
             <div className="my-20 text-center">
-                <h2 className="text-3xl font-bold text-gray-800 mb-10">Ready to Get Started?</h2>
+                <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Ready to Get Started?</h2>
                 <p className="text-xl text-gray-600 mb-10">
                     Explore all the features that ResumeRun has to offer and take the first step towards landing your dream job.
                 </p>
-                <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full">
+                <button className="get-started-button">
                     Sign Up Now
                 </button>
             </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import './Pages.scss';
 
 export function Contact() {
     return (
@@ -57,7 +58,7 @@ export function Contact() {
                         <div className="text-center">
                             <button 
                                 type="submit" 
-                                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full">
+                                className="get-started-button">
                                 Send Message
                             </button>
                         </div>
@@ -80,10 +81,10 @@ export function Contact() {
             <div className="my-20 text-center">
                 <h2 className="text-3xl font-bold text-gray-800 mb-8">Connect with Us on Social Media</h2>
                 <div className="flex justify-center gap-8">
-                    <a href="#" className="text-gray-600 hover:text-blue-500"><img src="social-icon-facebook.png" alt="Facebook" className="w-10 h-10" /></a>
-                    <a href="#" className="text-gray-600 hover:text-blue-500"><img src="social-icon-twitter.png" alt="Twitter" className="w-10 h-10" /></a>
-                    <a href="#" className="text-gray-600 hover:text-blue-500"><img src="social-icon-linkedin.png" alt="LinkedIn" className="w-10 h-10" /></a>
-                    <a href="#" className="text-gray-600 hover:text-blue-500"><img src="social-icon-instagram.png" alt="Instagram" className="w-10 h-10" /></a>
+                    <a href="#" className="social-link"><img src="social-icon-facebook.png" alt="Facebook" className="w-10 h-10" /></a>
+                    <a href="#" className="social-link"><img src="social-icon-twitter.png" alt="Twitter" className="w-10 h-10" /></a>
+                    <a href="#" className="social-link"><img src="social-icon-linkedin.png" alt="LinkedIn" className="w-10 h-10" /></a>
+                    <a href="#" className="social-link"><img src="social-icon-instagram.png" alt="Instagram" className="w-10 h-10" /></a>
                 </div>
             </div>
         </div>

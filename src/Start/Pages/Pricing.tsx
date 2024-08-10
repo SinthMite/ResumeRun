@@ -1,3 +1,6 @@
+import React from "react";
+import './Pages.scss';
+
 export function Pricing() {
     return (
         <div className="mt-20 px-4">
@@ -14,7 +17,7 @@ export function Pricing() {
             {/* Pricing Tiers */}
             <div className="my-20 flex flex-col md:flex-row justify-center gap-8">
                 {/* Free Plan */}
-                <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+                <div className="pricing-card">
                     <h3 className="text-3xl font-bold text-gray-700 mb-4">Free Plan</h3>
                     <p className="text-xl text-gray-600 mb-8">Get started with the basics.</p>
                     <ul className="text-left text-gray-600 mb-8">
@@ -23,13 +26,13 @@ export function Pricing() {
                         <li className="mb-4">✔️ Job Tracking Dashboard (Limited)</li>
                     </ul>
                     <p className="text-2xl font-semibold text-gray-800 mb-8">$0/month</p>
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full">
+                    <button className="get-started-button">
                         Get Started
                     </button>
                 </div>
 
                 {/* Pro Plan */}
-                <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+                <div className="pricing-card">
                     <h3 className="text-3xl font-bold text-gray-700 mb-4">Pro Plan</h3>
                     <p className="text-xl text-gray-600 mb-8">Unlock advanced features.</p>
                     <ul className="text-left text-gray-600 mb-8">
@@ -39,13 +42,13 @@ export function Pricing() {
                         <li className="mb-4">✔️ Priority Email Support</li>
                     </ul>
                     <p className="text-2xl font-semibold text-gray-800 mb-8">$19.99/month</p>
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full">
+                    <button className="get-started-button">
                         Upgrade Now
                     </button>
                 </div>
 
                 {/* Premium Plan */}
-                <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+                <div className="pricing-card">
                     <h3 className="text-3xl font-bold text-gray-700 mb-4">Premium Plan</h3>
                     <p className="text-xl text-gray-600 mb-8">Get the full experience.</p>
                     <ul className="text-left text-gray-600 mb-8">
@@ -55,7 +58,7 @@ export function Pricing() {
                         <li className="mb-4">✔️ 24/7 Priority Support</li>
                     </ul>
                     <p className="text-2xl font-semibold text-gray-800 mb-8">$49.99/month</p>
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full">
+                    <button className="get-started-button">
                         Go Premium
                     </button>
                 </div>
@@ -114,11 +117,11 @@ export function Pricing() {
             <div className="my-20">
                 <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">What Our Users Say</h2>
                 <div className="flex flex-col md:flex-row justify-center gap-8">
-                    <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div className="testimonial-card">
                         <p className="text-gray-600">"The Pro Plan gave me all the tools I needed to streamline my job search. Highly recommend!"</p>
                         <p className="text-gray-800 font-semibold mt-4">- Alex M.</p>
                     </div>
-                    <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div className="testimonial-card">
                         <p className="text-gray-600">"I upgraded to Premium and the resume review service was a game changer. Landed my dream job in no time!"</p>
                         <p className="text-gray-800 font-semibold mt-4">- Jamie L.</p>
                     </div>
@@ -131,7 +134,7 @@ export function Pricing() {
                 <p className="text-xl text-gray-600 mb-10">
                     Choose the plan that suits your needs and start landing your dream job with ResumeRun today.
                 </p>
-                <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full">
+                <button className="get-started-button">
                     Get Started Now
                 </button>
             </div>

@@ -1,0 +1,25 @@
+
+:root {
+    --gradient-color-1: rgba(240, 4, 205, 0.925);
+    --gradient-color-2: rgb(255, 111, 0);
+    --gradient-angle: 45deg;
+    --webkit-background-clip: text;
+    --background-clip: text;
+    --text-color: transparent;
+}
+
+.text-highlight {
+    background: linear-gradient(var(--gradient-angle), var(--gradient-color-1), var(--gradient-color-2));
+    background-clip: var(--background-clip);
+    -webkit-background-clip: var(--webkit-background-clip);
+    color: var(--text-color);
+    animation: gradient-animation 5s infinite ease-in-out;
+}
+
+.step-circle{
+    background: linear-gradient(var(--gradient-angle), var(--gradient-color-1), var(--gradient-color-2));
+    padding: 2rem;
+    aspect-ratio: 1;
+    color: white;
+    border-radius: 50%;
+}

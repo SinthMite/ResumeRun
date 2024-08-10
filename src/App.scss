@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+
+.subtle-gradient-bg {
+  background: 
+    radial-gradient(circle at left, rgba(247, 228, 228, 0.9), rgba(245, 245, 245, 0.6) 70%) left/50% no-repeat,
+    radial-gradient(circle at right, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.6) 70%) right/50% no-repeat,
+    white; /* Fallback color and main background */
+}
+
+.StarterBar {
+  padding: 1rem;
+  z-index: 10;
+}
+
+.StarterLinks {
+  margin-top: 2rem;
+  z-index: 10;
+}
