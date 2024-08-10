@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {Bar} from './Start/Bar/Bar'
 import {Home} from './Start/Pages/Home'
 import logo from './assets/logo.png'
-import './App.css'
+import './App.scss'
 
 function App() {
   const [count, setCount] = useState(0)
