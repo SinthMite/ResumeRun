@@ -9,31 +9,37 @@ import { AppRR } from './AppRR/AppRR';
 import { LogInProvider, useLogInState } from './State/State'; // Adjust the import path accordingly
 import './App.scss';
 
-function App() {
+function AppContent() {
   const { logIn } = useLogInState(); // Get logIn from the context
 
   return (
+    !logIn ? (
+      <div className="subtle-gradient-bg">
+        <div className="StarterBar">
+          <Bar />
+        </div>
+        <div className="StarterLinks">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </div>
+    ) : (
+      <div className="AppRR">
+        <AppRR />
+      </div>
+    )
+  );
+}
+
+function App() {
+  return (
     <LogInProvider> {/* Wrap the App component in the LogInProvider */}
-      {!logIn ? (
-        <div className="subtle-gradient-bg">
-          <div className="StarterBar">
-            <Bar />
-          </div>
-          <div className="StarterLinks">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </div>
-        </div>
-      ) : (
-        <div className="AppRR">
-          <AppRR />
-        </div>
-      )}
+      <AppContent /> {/* Separate content rendering into its own component */}
     </LogInProvider>
   );
 }

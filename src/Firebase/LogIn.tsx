@@ -100,29 +100,12 @@ export function LogIn() {
             });
     };
 
-    const guestLogIn = () => {
-        setLoading(true);
-        const guestEmail = 'tester@test.com';
-        const guestPassword = 'password';
-        signInWithEmailAndPassword(auth, guestEmail, guestPassword)
-            .then((result: UserCredential) => {
-                setLogIn(true);
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.error("Guest Auth Error:", error);
-                setError("Failed to sign in as guest.");
-                setLoading(false);
-            });
-    };
-
     return (
         <div className='totalscreenLogView'>
             {error && <div className="error-message">{error}</div>}
             {loading ? (
                 <div className="loading-spinner">Loading...</div>
             ) : (
-                logIn === false ? (
                     <section id="logged-out-view">
                         <div className="containerLogIn">
                             <h1 className="app-title">Welcome</h1>
@@ -148,18 +131,10 @@ export function LogIn() {
                                 />
                                 <button className="primary-btn" onClick={authSignInWithEmail}>Sign in</button>
                                 <button className="secondary-btn" onClick={authCreateAccountWithEmail}>Create Account</button>
-                                <button className="tri-btn" onClick={guestLogIn}>Demo</button>
                             </div>
                         </div>
                     </section>
-                ) : (
-                    <section id="logged-in-view">
-                        <div className="containerLogIn">
-                            <h1 className="app-title">Welcome</h1>
-                            <button className="primary-btn" onClick={authSignOut}>Sign Out</button>
-                        </div>
-                    </section>
-                )
+                
             )}
         </div>
     );
