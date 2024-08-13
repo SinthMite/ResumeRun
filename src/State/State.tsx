@@ -1,23 +1,26 @@
-import { createContext, useState, useContext } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-// Create a context with a default value
-const LogInContext = createContext({
-  logIn: false, // Default value
-  setLogIn: () => {}, // No-op function as default
-});
+interface LogInContextType {
+    logIn: boolean;
+    setLogIn: (value: boolean) => void;
+}
 
-// Create a provider component
-export const LogInProvider = ({ children }) => {
-  const [logIn, setLogIn] = useState(false);
+const LogInContext = createContext<LogInContextType | undefined>(undefined);
 
-  return (
-    <LogInContext.Provider value={{ logIn, setLogIn }}>
-      {children}
-    </LogInContext.Provider>
-  );
+export const LogInProvider = ({ children }: { children: ReactNode }) => {
+    const [logIn, setLogIn] = useState<boolean>(false);
+
+    return (
+        <LogInContext.Provider value={{ logIn, setLogIn }}>
+            {children}
+        </LogInContext.Provider>
+    );
 };
 
-// Custom hook to use the logInState
 export const useLogInState = () => {
-  return useContext(LogInContext);
+    const context = useContext(LogInContext);
+    if (!context) {
+        throw new Error('useLogInState must be used within a LogInProvider');
+    }
+    return context;
 };
