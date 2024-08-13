@@ -1,9 +1,13 @@
-import React from "react";
+import {useState} from "react";
 import './Bar.scss';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
-
+import {LogIn} from '../../Firebase/LogIn'
 export function Bar() {
+    const [hidden, setHidden] = useState(true);
+    const toggleMenu = () => {
+        setHidden(!hidden);
+    };
     return (
         <div className="bar-container slide-in">
             <div>
@@ -30,7 +34,8 @@ export function Bar() {
             </div>
             <div>
                 <ul className="auth-actions">
-                    <li>Sign In</li>
+                    <button onClick={toggleMenu}>Sign In</button>
+                    {!hidden&& <LogIn  />}
                     <li>
                         <button className="get-started-button">Get Started</button>
                     </li>
